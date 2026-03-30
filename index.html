@@ -6,7 +6,7 @@
   <title>Ruttala's Wedding Invitation — Anupama &amp; Tarun</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+Telugu:wght@400;500&family=Tiro+Telugu:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+Telugu:wght@400;600;700;800;900&family=Hind+Guntur:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ── Reset ────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,7 @@
     body {
       background: #5b0036;
       color: #f5d67a;
-      font-family: 'Cormorant Garamond', 'Noto Sans Telugu', Georgia, 'Times New Roman', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif Telugu', Georgia, 'Times New Roman', serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
@@ -24,29 +24,45 @@
     /* Telugu font overrides — applied when <html lang="te"> */
     :lang(te) body,
     html[lang="te"] body {
-      font-family: 'Tiro Telugu', 'Noto Sans Telugu', Georgia, serif;
+      font-family: 'Hind Guntur', 'Noto Serif Telugu', Georgia, serif;
     }
     html[lang="te"] .t-heading,
     html[lang="te"] .t-title {
-      font-family: 'Tiro Telugu', 'Noto Sans Telugu', Georgia, serif;
+      font-family: 'Noto Serif Telugu', Georgia, serif;
+      font-weight: 800;
       letter-spacing: .04em;
     }
     html[lang="te"] .t-name {
-      font-family: 'Tiro Telugu', 'Noto Sans Telugu', Georgia, serif;
+      font-family: 'Noto Serif Telugu', Georgia, serif;
       font-style: normal;
+      font-weight: 900;
     }
     html[lang="te"] .t-om {
-      font-family: 'Tiro Telugu', 'Noto Sans Telugu', Georgia, serif;
+      font-family: 'Noto Serif Telugu', Georgia, serif;
+      font-weight: 700;
+    }
+    html[lang="te"] .save-title {
+      font-family: 'Noto Serif Telugu', Georgia, serif;
+      font-style: normal;
+      font-weight: 900;
+    }
+    html[lang="te"] .close-names,
+    html[lang="te"] .venue-name {
+      font-family: 'Noto Serif Telugu', Georgia, serif;
+      font-style: normal;
+      font-weight: 700;
     }
     html[lang="te"] .t-tagline,
     html[lang="te"] .t-caption,
-    html[lang="te"] .t-sub,
-    html[lang="te"] .save-title,
-    html[lang="te"] .close-names,
-    html[lang="te"] .venue-name,
-    html[lang="te"] .fam-person {
-      font-family: 'Tiro Telugu', 'Noto Sans Telugu', Georgia, serif;
+    html[lang="te"] .t-sub {
+      font-family: 'Hind Guntur', 'Noto Serif Telugu', Georgia, serif;
       font-style: normal;
+      font-weight: 500;
+    }
+    html[lang="te"] .fam-person {
+      font-family: 'Hind Guntur', 'Noto Serif Telugu', Georgia, serif;
+      font-style: normal;
+      font-weight: 600;
     }
 
     /* ── Particle canvas ──────────────────────────────── */
@@ -411,7 +427,7 @@
       background: linear-gradient(135deg, rgba(58,0,34,.96) 0%, rgba(90,10,50,.96) 100%);
       border: 1px solid rgba(245,214,122,.6);
       color: #f5d67a;
-      font-family: 'Noto Sans Telugu', 'Cormorant Garamond', Georgia, serif;
+      font-family: 'Hind Guntur', 'Noto Serif Telugu', 'Cormorant Garamond', Georgia, serif;
       font-size: .72rem;
       letter-spacing: .08em;
       padding: .6rem 2rem;
