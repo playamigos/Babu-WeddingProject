@@ -159,6 +159,22 @@
       text-transform: uppercase;
       line-height: 1.3;
     }
+    .t-heading .wc {
+      display: inline-block;
+      animation: waveFloat 3.6s ease-in-out infinite;
+      will-change: transform;
+    }
+    .t-om .wc,
+    .t-title .wc,
+    .save-title .wc {
+      display: inline-block;
+      animation: waveFloat 3.6s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes waveFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
 
     /* Page title / sub-heading (Cinzel, smaller) */
     .t-title {
@@ -177,10 +193,10 @@
     .t-om {
       font-size: clamp(2rem, 6.5vw, 3.6rem);
       color: #ffe9a0;
-      text-shadow: 0 0 30px rgba(245,214,122,.9), 0 0 60px rgba(245,214,122,.4), 0 2px 10px rgba(0,0,0,.5);
-      letter-spacing: .14em;
+      text-shadow: 0 0 14px rgba(245,214,122,.5), 0 2px 8px rgba(0,0,0,.4);
+      letter-spacing: .06em;
       line-height: 1.4;
-      font-weight: 400;
+      font-weight: 700;
     }
 
     /* Transliteration / italic subtitle */
@@ -221,11 +237,18 @@
     }
 
     .t-amp {
-      font-size: clamp(2rem, 6.5vw, 4.2rem);
-      color: #f0c84a;
-      text-shadow: 0 0 20px rgba(240,200,74,.6);
       display: block;
-      margin: .15rem 0;
+      margin: .6rem 0 .15rem;
+    }
+    .t-amp .icon-inner {
+      display: inline-block;
+      animation: handsPulse 5s ease-in-out infinite;
+      will-change: transform;
+      transform-origin: center;
+    }
+    @keyframes handsPulse {
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.06); }
     }
 
     /* Invitation tagline */
@@ -244,6 +267,11 @@
       color: #f5d67a;
       opacity: .65;
       text-shadow: 0 0 12px rgba(245,214,122,.4);
+    }
+    .t-gold .icon-inner {
+      display: inline-block;
+      animation: iconFloat 4s ease-in-out infinite;
+      will-change: transform;
     }
 
     /* ── Family cards ─────────────────────────────────── */
@@ -406,7 +434,16 @@
       font-size: 3.2rem;
       color: #f5d67a;
       text-shadow: 0 0 20px rgba(245,214,122,.5);
-      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    .heart-icon .icon-inner {
+      display: inline-block;
+      animation: iconFloat 4s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes iconFloat {
+      0%,100% { transform: translateY(0)    scale(1); }
+      30%      { transform: translateY(-7px) scale(1.12); }
+      60%      { transform: translateY(-3px) scale(1.05); }
     }
     @keyframes heartbeat { 0%,100% { transform:scale(1); } 50% { transform:scale(1.16); } }
     .close-names {
@@ -510,7 +547,7 @@
     <div class="reveal rv-up    d3 t-title" data-i18n="hero-title" style="margin-bottom:1.3rem">Ruttala&rsquo;s Wedding Invitation</div>
     <div style="margin:1.6rem 0">
       <div class="reveal rv-left  d3 t-name" data-i18n="bride-name">Anupama</div>
-      <span class="reveal rv-scale d4 t-amp">&#10022;</span>
+      <span class="reveal rv-scale d4 t-amp"><span class="icon-inner"><img src="Images/HandinHand.png" alt="hand in hand" style="width:clamp(90px,28vw,160px);height:auto;aspect-ratio:408/212;filter:drop-shadow(0 0 10px rgba(245,214,122,.5))"></span></span>
       <div class="reveal rv-right d3 t-name" data-i18n="groom-name">Tarun</div>
     </div>
     <div class="reveal rv-up    d4 divider"></div>
@@ -522,7 +559,7 @@
 
   <!-- 3 ▸ Families -->
   <section class="section">
-    <div class="reveal rv-down  d1 t-gold">&#10022;</div>
+    <div class="reveal rv-down  d1 t-gold"><span class="icon-inner">&#10022;</span></div>
     <div class="reveal rv-up    d2 t-heading" data-i18n="family-heading">With the Blessings of</div>
     <div class="reveal rv-up    d3 divider"></div>
     <div class="family-grid">
@@ -540,14 +577,14 @@
         <div class="fam-person" data-i18n="groom-mother">Smt. Vipparthi Kanakamahalakshmi<small>Mother of the Groom</small></div>
       </div>
     </div>
-    <div class="reveal rv-up d6" data-i18n="family-invite" style="margin-top:2rem;font-size:clamp(1rem,2.5vw,1.1rem);color:#c9953a;font-style:italic;letter-spacing:.12em">
+    <div class="reveal rv-up d6" data-i18n="family-invite" style="margin-top:2rem;font-size:clamp(1.25rem,3vw,1.5rem);color:#c9953a;font-style:italic;letter-spacing:.08em">
       Cordially invite you to bless the couple
     </div>
   </section>
 
   <!-- 4 ▸ Date & Time -->
   <section class="section">
-    <div class="reveal rv-down  d1 t-gold">&#10022;</div>
+    <div class="reveal rv-down  d1 t-gold"><span class="icon-inner">&#10022;</span></div>
     <div class="reveal rv-up    d2 t-heading" data-i18n="date-heading">Auspicious Date &amp; Time</div>
     <div class="reveal rv-up    d3 divider"></div>
     <div class="reveal rv-scale d3 date-box">
@@ -563,7 +600,7 @@
 
   <!-- 5 ▸ Venue -->
   <section class="section">
-    <div class="reveal rv-down  d1 t-gold">&#10022;</div>
+    <div class="reveal rv-down  d1 t-gold"><span class="icon-inner">&#10022;</span></div>
     <div class="reveal rv-up    d2 t-heading" data-i18n="venue-heading">Venue</div>
     <div class="reveal rv-up    d3 divider"></div>
     <div class="reveal rv-scale d3 venue-box">
@@ -582,7 +619,7 @@
 
   <!-- 6 ▸ Save the Date -->
   <section class="section">
-    <div class="reveal rv-scale d1 heart-icon">&#9829;</div>
+    <div class="reveal rv-scale d1 heart-icon"><span class="icon-inner">&#9829;</span></div>
     <div class="reveal rv-up    d2 save-title" data-i18n="save-title">Save<br>The Date</div>
     <div class="reveal rv-up    d3 save-sub">29 &middot; 04 &middot; 2026</div>
     <div class="reveal rv-up    d4 close-names" data-i18n="close-names">Anupama &amp; Tarun</div>
@@ -722,8 +759,52 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
 
-/* ══════════════════════════════════════════════════════════
-   BACKGROUND MUSIC
+/* ══════════════════════════════════════════════════════════   WAVE HEADINGS — wrap each character in a staggered span
+════════════════════════════════════════════════════════ */
+(function () {
+  // Splits text into grapheme clusters — keeps Telugu aksharas (base + matra) intact
+  const segmenter = typeof Intl !== 'undefined' && Intl.Segmenter
+    ? new Intl.Segmenter(undefined, { granularity: 'grapheme' })
+    : null;
+  function segmentText(text) {
+    if (segmenter) return [...segmenter.segment(text)].map(s => s.segment);
+    return [...text]; // fallback for old browsers (English-only safe)
+  }
+
+  function wrapWave(el) {
+    // Collect child nodes, preserving <br> elements
+    const nodes = Array.from(el.childNodes);
+    let chars = [];
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        chars.push(...segmentText(node.textContent).map(ch => ({ type: 'char', ch })));
+      } else if (node.nodeName === 'BR') {
+        chars.push({ type: 'br' });
+      }
+    });
+    const totalDuration = 3.6;
+    const charCount = chars.filter(c => c.type === 'char' && c.ch !== ' ').length;
+    let idx = 0;
+    el.innerHTML = chars.map(item => {
+      if (item.type === 'br') return '<br>';
+      if (item.ch === ' ') return '&ensp;';
+      const delay = ((idx / Math.max(charCount - 1, 1)) * totalDuration * 0.5).toFixed(3);
+      idx++;
+      return `<span class="wc" style="animation-delay:-${delay}s">${item.ch}</span>`;
+    }).join('');
+  }
+
+  function wrapHeadings() {
+    document.querySelectorAll('.t-heading, .t-om, .t-title, .save-title').forEach(wrapWave);
+  }
+  wrapHeadings();
+  document.getElementById('lang-btn').addEventListener('click', () => {
+    setTimeout(wrapHeadings, 50);
+  });
+})();
+
+
+/* ════════════════════════════════════════════════════════   BACKGROUND MUSIC
    — autoplay on load (silent attempt)
    — fallback: first touch / click / pointer anywhere
 ══════════════════════════════════════════════════════════ */
