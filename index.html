@@ -58,6 +58,7 @@
       font-family: 'Hind Guntur', 'Noto Serif Telugu', Georgia, serif;
       font-style: normal;
       font-weight: 500;
+      letter-spacing: 0;
     }
     html[lang="te"] .fam-person {
       font-family: 'Hind Guntur', 'Noto Serif Telugu', Georgia, serif;
@@ -184,7 +185,7 @@
 
     /* Transliteration / italic subtitle */
     .t-sub {
-      font-size: clamp(1.05rem, 3vw, 1.45rem);
+      font-size: clamp(1.25rem, 3.5vw, 1.7rem);
       color: #f0d490;
       letter-spacing: .22em;
       font-style: italic;
@@ -193,7 +194,7 @@
 
     /* Body / descriptive text */
     .t-caption {
-      font-size: clamp(1rem, 2.6vw, 1.15rem);
+      font-size: clamp(1.2rem, 3vw, 1.45rem);
       color: #ddb96a;
       max-width: 480px;
       line-height: 2;
@@ -203,7 +204,7 @@
 
     /* Tiny all-caps eyebrow */
     .t-eyebrow {
-      font-size: clamp(.85rem, 2.4vw, .95rem);
+      font-size: clamp(1rem, 2.8vw, 1.2rem);
       letter-spacing: .35em;
       color: #d4a843;
       text-transform: uppercase;
@@ -229,7 +230,7 @@
 
     /* Invitation tagline */
     .t-tagline {
-      font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+      font-size: clamp(1.25rem, 3.2vw, 1.6rem);
       color: #d9aa50;
       letter-spacing: .18em;
       margin-top: 1.6rem;
@@ -571,7 +572,7 @@
       <div class="venue-addr" data-i18n="venue-addr">Quarry Canal Road, Cotton Peta,<br>Dhavaleswaram, Rajahmundry</div>
       <a href="https://maps.app.goo.gl/tunSMSEoXm3qxELA8"
          target="_blank" rel="noopener noreferrer" class="maps-btn" data-i18n="maps-btn">
-        <span>&#128205;</span><span>View on Google Maps</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span><span>View on Google Maps</span>
       </a>
     </div>
     <div class="reveal rv-up d5 t-caption" data-i18n="venue-caption" style="margin-top:2rem">
@@ -784,7 +785,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
       'venue-heading':      'Venue',
       'venue-name':         'Sri Laxmi Padmavathi<br>Function Hall A/c',
       'venue-addr':         'Quarry Canal Road, Cotton Peta,<br>Dhavaleswaram, Rajahmundry',
-      'maps-btn':           '<span>&#128205;</span><span>View on Google Maps</span>',
+      'maps-btn':           '<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span><span>View on Google Maps</span>',
       'venue-caption':      'Ample parking available &middot; All are welcome',
       'save-title':         'Save<br>The Date',
       'close-names':        'Anupama &amp; Tarun',
@@ -792,34 +793,34 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     },
     te: {
       'ganesh-om':          'ఓం శ్రీ గణేశాయ నమః',
-      'ganesh-caption':     'విఘ్నాలను తొలగించే శ్రీ గణేశుని ఆశీస్సులు కోరుతూ, ఈ పవిత్ర జీవన ప్రయాణాన్ని మొదలుపెడుతున్నాము.',
-      'hero-eyebrow':       '&#10022;&ensp;ఆనందంతో &amp; ఆశీస్సులతో&ensp;&#10022;',
-      'hero-title':         'రుత్తల వివాహ ఆహ్వానం',
+      'ganesh-caption':     'అడ్డంకులను తొలగించే శ్రీ గణపతి ఆశీస్సులు కోరుతూ, ఈ పవిత్ర వివాహ శుభకార్యాన్ని ప్రారంభిస్తున్నాము.',
+      'hero-eyebrow':       '&#10022;&ensp;శుభాశీస్సులతో &amp; ఆనందంతో&ensp;&#10022;',
+      'hero-title':         'రుత్తల శుభవివాహ ఆహ్వానము',
       'bride-name':         'అనుపమ',
       'groom-name':         'తరుణ్',
-      'hero-tagline':       'తమ కుటుంబాలతో కలిసి, మీకు ఆనందంగా ఆహ్వానిస్తున్నారు<br>వారి వివాహ వేడుకలో పాల్గొనమని',
-      'family-heading':     'ఆశీస్సులతో',
+      'hero-tagline':       'తమ కుటుంబ సభ్యులతో కలిసి, వారి శుభవివాహానికి<br>మిమ్మల్ని హృదయపూర్వకంగా ఆహ్వానిస్తున్నారు',
+      'family-heading':     'పెద్దల ఆశీర్వాదాలతో',
       'bride-family-label': 'వధువు కుటుంబం',
-      'bride-father':       'శ్రీ రుత్తల శ్రీనివాస రావు<small>వధువు తండ్రి</small>',
-      'bride-mother':       'శ్రీమతి రుత్తల భారతి<small>వధువు తల్లి</small>',
+      'bride-father':       'శ్రీ రుత్తల శ్రీనివాస రావు<small>వధువు తండ్రిగారు</small>',
+      'bride-mother':       'శ్రీమతి రుత్తల భారతి<small>వధువు తల్లిగారు</small>',
       'groom-family-label': 'వరుని కుటుంబం',
-      'groom-father':       'శ్రీ విప్పర్తి వి.జె. అచ్యుత రావు<small>వరుని తండ్రి</small>',
-      'groom-mother':       'శ్రీమతి విప్పర్తి కనకమహాలక్ష్మి<small>వరుని తల్లి</small>',
-      'family-invite':      'జంటను ఆశీర్వదించడానికి మిమ్మల్ని ఆదరంగా ఆహ్వానిస్తున్నాము',
-      'date-heading':       'శుభ తేదీ &amp; సమయం',
+      'groom-father':       'శ్రీ విప్పర్తి వి.జె. అచ్యుత రావు<small>వరుని తండ్రిగారు</small>',
+      'groom-mother':       'శ్రీమతి విప్పర్తి కనకమహాలక్ష్మి<small>వరుని తల్లిగారు</small>',
+      'family-invite':      'వధూవరులను ఆశీర్వదించేందుకు మిమ్మల్ని మనఃపూర్వకంగా ఆహ్వానిస్తున్నాము',
+      'date-heading':       'శుభ ముహూర్తం &amp; సమయం',
       'date-day':           'బుధవారం',
       'date-my':            'ఏప్రిల్ &middot; 2026',
-      'muhurtham':          'ముహూర్తం',
-      'lunch':              'వివాహ భోజనం',
-      'date-caption':       'మీ రాక మాకు అత్యంత విలువైన బహుమతి',
-      'venue-heading':      'వేదిక',
+      'muhurtham':          'శుభ ముహూర్తం',
+      'lunch':              'వివాహ భోజన సమారాధన',
+      'date-caption':       'మీ రాక మాకు అత్యంత సంతోషాన్ని కలిగిస్తుంది',
+      'venue-heading':      'వివాహ వేదిక',
       'venue-name':         'శ్రీ లక్ష్మీ పద్మావతి<br>ఫంక్షన్ హాల్ A/c',
       'venue-addr':         'క్వారీ కెనాల్ రోడ్, కాటన్ పేట,<br>ధవళేశ్వరం, రాజమహేంద్రవరం',
-      'maps-btn':           '<span>&#128205;</span><span>గూగుల్ మ్యాప్స్‌లో చూడండి</span>',
-      'venue-caption':      'పార్కింగ్ సదుపాయం అందుబాటులో ఉంది &middot; అందరూ ఆహ్వానితులే',
-      'save-title':         'తేదీని<br>గుర్తుంచుకోండి',
+      'maps-btn':           '<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span><span>గూగుల్ మ్యాప్స్‌లో చూడండి</span>',
+      'venue-caption':      'వాహన సదుపాయం అందుబాటులో ఉంది &middot; అందరూ ఆదరంగా ఆహ్వానితులే',
+      'save-title':         'శుభ తేదీని<br>గుర్తుంచుకోండి',
       'close-names':        'అనుపమ &amp; తరుణ్',
-      'final-caption':      'రెండు కుటుంబాలు, ఒక అందమైన నూతనారంభం.<br>మీతో కలిసి వేడుక జరుపుకోవడానికి ఎదురుచూస్తున్నాము.',
+      'final-caption':      'రెండు కుటుంబాల అందమైన కలయిక — ఒక శుభారంభం.<br>మీతో కలిసి వేడుక జరుపుకోవడానికి ఎదురుచూస్తున్నాము.',
     }
   };
 
